@@ -20,12 +20,19 @@ public class Tablero {
 		grilla[fila][col].setEstado(estado);
 	}
 	
-	public int getCelda(int fila, int col) {
-		return grilla[fila][col].getEstado();
+	public Celda getCelda(int fila, int col) {
+		return grilla[fila][col];
 	}
 	
 	public int getSize() {
 		return size;
+	}
+	
+	public void cambiarEstado(int fila, int col) {
+		Celda celda = grilla[fila][col];
+		int estado = celda.getEstado();
+		estado = (estado + 1) % 3; // Ciclo  0 -> 1 -> 2 -> 0
+		celda.setEstado(estado);
 	}
 	
 	public void imprimir() {

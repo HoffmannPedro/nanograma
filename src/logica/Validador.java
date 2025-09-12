@@ -7,7 +7,7 @@ public class Validador {
 		
 		for (int i = 0; i < n; i++) {
 			for ( int j = 0; j < n; j++) {
-				int estadoJugador = jugador.getCelda(i, j);
+				int estadoJugador = jugador.getCelda(i, j).getEstado();
 				
 				// La solucion tiene 1 para negro, 0 para blanco
 				int esperado = solucion[i][j];
