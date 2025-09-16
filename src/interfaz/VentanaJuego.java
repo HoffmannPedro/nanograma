@@ -54,28 +54,29 @@ public class VentanaJuego extends JFrame {
 	public VentanaJuego() {
 		setTitle("Nanograma");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
-		getContentPane().setLayout(new BorderLayout(0, 0));
+		setBounds(100, 100, 330, 300);
+		getContentPane().setLayout(null);
 		
 		// Se crean paneles de ordenamiento
 		JPanel panelGrilla = new JPanel();
+		panelGrilla.setBounds(36, 14, 250, 216);
 		getContentPane().add(panelGrilla);
 		panelGrilla.setLayout(new GridLayout(5, 5, 0, 0));
 		
 		panelFilas = new JPanel();
-		getContentPane().add(panelFilas, BorderLayout.WEST);
+		panelFilas.setBounds(0, 14, 37, 216);
+		getContentPane().add(panelFilas);
 		panelFilas.setLayout(new GridLayout(0, 1, 0, 0));
 		
 		panelColumnas = new JPanel();
-		getContentPane().add(panelColumnas, BorderLayout.NORTH);
-		panelColumnas.setLayout(new GridLayout(1, 6, 0, 0));
+		panelColumnas.setBounds(36, 0, 250, 14);
+		getContentPane().add(panelColumnas);
+		panelColumnas.setLayout(new GridLayout(0, 5, 0, 0));
 		
 		JPanel panelSur = new JPanel();
-		getContentPane().add(panelSur, BorderLayout.SOUTH);
+		panelSur.setBounds(0, 230, 316, 33);
+		getContentPane().add(panelSur);
 		
-		// Se crean layouts para las pistas
-		
-		// Pistas de Columnas
 		JLabel pistaCol00 = new JLabel("-");
 		panelColumnas.add(pistaCol00);
 		
